@@ -1,0 +1,32 @@
+<view class="inbox">
+  <van-notify id="van-notify" />
+<van-cell-group>
+  <van-field
+    model:value="{{ phoneNumber }}"
+    type="number"
+    required
+    label="手机号"
+    placeholder="请输入手机号"
+    bind:change="getPhoneNumber"
+    left-icon="phone"
+    maxlength="11"
+  />
+  <van-field
+    model:value="{{ password }}"
+    type="password"
+    required
+    label="密码"
+    placeholder="请输入密码"
+    bind:change="getPassword"
+    left-icon="eye"
+    maxlength="20"
+  />
+</van-cell-group>
+<view class="warning">
+  <text>
+    *提示：如果该手机号未注册会自动注册
+  </text>
+</view>
+<!--登录按钮-->
+  <van-button  round  open-type="getUserInfo" type="normal"  size="large" color="linear-gradient(to right, #00cccc, #6149f6)" bindgetuserinfo="getInfoAndLogin">登录</van-button>
+</view>

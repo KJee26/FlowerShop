@@ -1,0 +1,15 @@
+
+<view class="content">
+	<!--页面背景图片-->
+	<image class='background' src="../../icons/cover.png" mode="aspectFill"></image>
+  <!--页面选择按钮-->
+  <view class="btn">
+    <van-button icon="friends" round type="primary" size="large" color="linear-gradient(to right, #00cccc, #6149f6)"  bindtap="enterCustom">我是顾客</van-button>
+  </view>
+
+  <view class="btn">
+    <van-button icon="shop" round type="primary" size="large" color="linear-gradient(to right, #00cccc, #6149f6)" bindtap="enterShop">我是商家</van-button>
+  </view>
+  
+</view>
+

@@ -1,0 +1,25 @@
+<!--菜单栏-->
+<van-tabbar active="{{0 }}" bind:change="onChange">
+  <van-tabbar-item icon="shop">首页</van-tabbar-item>
+  <van-tabbar-item icon="cart">购物车</van-tabbar-item>
+  <van-tabbar-item icon="balance-list">订单</van-tabbar-item>
+  <van-tabbar-item icon="manager">我的</van-tabbar-item>
+</van-tabbar>
+<!--商品列表-->
+<navigator wx:for="{{goodList}}" wx:key="goodsId" url="/pages/goods_detail/goods_detail?goods_id={{item.goodsId}}">
+  <view class="goods_image">
+    <image class="gimg" mode="aspectFill" src="{{item.pic}}"/> 
+  </view>
+  <view class="goods_info">
+    <view class="info_name">{{item.goodsName}}</view> 
+    <view class="sales" >售出：{{item.salesNum}}  剩余：{{item.reserveNum}}</view> 
+    <view class="info_price">¥{{item.price}}/{{item.unit}}</view> 
+  </view>
+</navigator>
+
+
+<view class="bottom">
+  <van-divider />
+</view>
+
+

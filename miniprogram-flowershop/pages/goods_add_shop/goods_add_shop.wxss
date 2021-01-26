@@ -1,0 +1,30 @@
+/* pages/goods_add/goods_add.wxss */
+input{
+  border-width: 1rpx;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 10rpx;
+  margin-inline: 20rpx;
+  height: 80rpx;
+  background-color: #F8F8FF;
+}
+.tit{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  font-size: 40rpx;
+}
+.inbox{
+  display:flex;
+  margin: 10px 0 0 10px;
+}
+.btn{
+  padding: 30rpx;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}

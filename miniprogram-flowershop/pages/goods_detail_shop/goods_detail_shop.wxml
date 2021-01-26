@@ -1,0 +1,71 @@
+<!-- 轮播图 -->
+<view class="detail_swiper">
+<!--  <swiper autoplay indicator-dots circular>
+    <swiper-item wx:for="{{goodInfo.pics}}" wx:key="pics_id">
+      <image mode="widthFix" src="{{item.pics_mid}}" />
+    </swiper-item>
+  </swiper>-->
+</view>
+<!-- 详情 -->
+<view>
+  <image  mode="aspectFill" src="{{goodInfo.pic}}" />
+</view>
+
+
+<van-cell-group>
+  <van-field
+    value="{{ goodInfo.goods_name }}"
+    clearable
+    label="商品名称"
+    disabled
+    left-icon="flower-o"
+  />
+  <van-field
+    value="{{ goodInfo.unit }}"
+    clearable
+    label="商品单位"
+    disabled
+    left-icon="arrow"
+  />
+  <van-field
+  model:value="{{ goodInfo.price }}"
+    required
+    clearable
+    type="digit"
+    label="单价(可修改)"
+    placeholder="请输入单价"
+    bind:change="setPriceInput"
+    left-icon="gold-coin-o"
+  />
+  <van-field
+  model:value="{{ goodInfo.reserveNum }}"
+    required
+    clearable
+    type="number"
+    label="商品余量(可修改)"
+    placeholder="请输入商品总量"
+    bind:change="setReserveNum"
+    left-icon="edit"
+  />
+  <van-field
+    value="{{ goodInfo.salesNum}}"
+    clearable
+    label="已售出"
+    disabled
+    left-icon="certificate"
+  />
+  
+</van-cell-group>
+<!--
+  <view class="inbox">价格：¥<input bindinput="setPriceInput"  auto-focus placeholder="{{goodInfo.price}}"/> </view> 
+  <view class="inbox">售出：{{goodInfo.salesNum}} </view> 
+  <view class="inbox">剩余：<input bindinput="setReserveNum" auto-focus placeholder= "{{goodInfo.reserveNum}}" /></view>
+-->
+<!--下菜单栏-->
+<view class="btm_tool">
+  <view class="tool_item del_goods" bindtap="deleteGoods">删除商品</view>
+  <view class="tool_item confirm_updata" bindtap="updateGoods">保存修改</view>
+</view>
+<view class="bottom">
+  <van-divider />
+</view>

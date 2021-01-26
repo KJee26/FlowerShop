@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tabBar_shop":"../../components/tabBar_shop/tabBar_shop"
+  },
+  "navigationBarTitleText": "个人中心"
+}

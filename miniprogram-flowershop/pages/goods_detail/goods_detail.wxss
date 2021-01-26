@@ -1,0 +1,132 @@
+page {
+  padding-bottom: 90rpx;
+  background-color: #f7f8fa;
+}
+.detail_swiper swiper {
+  height: 70vw;
+  text-align: center;
+}
+.detail_swiper swiper image {
+  width: 60%;
+}
+.detail_info {
+  padding-top: 8rpx;
+  padding-left:30rpx;
+  padding-right:30rpx;
+}
+.detail_info .info_price {
+  padding: 10rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: var(--themeColor);
+}
+.detail_info .info_detail {
+  display: flex;
+}
+.detail_info .info_detail .info_name {
+  flex: 5;
+  font-size: 50rpx;
+  color: rgb(29, 27, 27);
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-weight: 500;
+}
+.sales {
+  flex: 5;
+  flex-direction: row;
+  font-size: 35rpx;
+  color: #666;
+  font-weight: 500;
+  align-content: flex-end;
+  font-style: italic;
+}
+.detail_info .info_detail .info_collect {
+  flex: 1;
+  text-align: center;
+  border-left: 2rpx solid #888;
+}
+.detail_info .info_detail .info_collect .collect_text {
+  font-size: 24rpx;
+}
+.detail_more .more_title {
+  padding: 10rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--themeColor);
+}
+.btm_tool {
+  border-top: 1rpx solid #ccc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+}
+.btm_tool .tool_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  position: relative;
+}
+.btm_tool .tool_item button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.btm_tool .btn_cart {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9400d39c;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  border-radius: 80rpx  ;
+}
+.btm_tool .btn_buy {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9400D3;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  border-radius:0 80rpx 80rpx 0 ;
+}
+.bottom{
+  margin-bottom: 30px;
+  align-items: center;
+}
+.commentBlock{
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  padding: 10rpx ;
+  margin: 20rpx;
+  background-color: #ffffff;
+  border-radius: 50rpx;
+
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  margin-left: 20rpx;
+}
+.name{
+  height: 30px;
+}

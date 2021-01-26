@@ -1,0 +1,35 @@
+<view class="order_item"  wx:for="{{goods_list}}" wx:key="index" >
+
+  <view class="order_no_wrap">
+    <view class="order_no">商品名称:</view>
+    <view class="order_no_value">{{item.goods_name}}</view>
+  </view>
+
+  <view class="order_no_wrap">
+    <view class="order_no">评价:
+      <van-rate 
+        value="{{ rate }}" 
+        icon="thumb-circle"
+        size="{{ 25 }}"
+        void-icon="thumb-circle-o"
+        bind:change="onChange"
+        color="#FF6EB4"
+        void-color="#eee" />
+    </view>  
+  </view>
+
+  <van-cell-group>
+    <van-field
+      value="{{ item.comment }}"
+      placeholder="请输入商品评价"
+      type="textarea"
+      autosize
+      bind:change="onChange"
+      id="{{item.goods_name}}"
+    />
+  </van-cell-group>
+</view>
+
+<view class="btn">
+  <van-button  round type="normal"  size="large" color="linear-gradient(to right, #00cccc, #6149f6)" bind:click="btnCommit">提交评价</van-button>
+</view>

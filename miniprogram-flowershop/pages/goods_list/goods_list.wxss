@@ -1,0 +1,58 @@
+page{
+  background-color: #EDEDED;
+}
+navigator {
+  display: flex;
+  padding: 10rpx ;
+  margin: 20rpx;
+  height: 200rpx;
+  background-color: #ffffff;
+  border-radius: 50rpx;
+  box-shadow: 5px 5px 2px #D3D3D3;
+}
+navigator .goods_image {
+  flex: 4; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gimg{
+  height: 170rpx;
+  border-radius: 20rpx;
+}
+navigator .goods_image image {
+  width: 70%;
+}
+navigator .goods_info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+navigator .goods_info .info_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  font-size: 40rpx;
+  font-weight: 700;
+}
+navigator .goods_info .sales {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  font-size: 30rpx;
+  font-style: italic;
+}
+navigator .goods_info .info_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+.btn{
+  padding:30rpx;
+}
+.bottom{
+  margin-bottom: 50px;
+  align-items: center;
+}

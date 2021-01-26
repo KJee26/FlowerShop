@@ -1,0 +1,68 @@
+<van-tabbar active="{{2 }}" bind:change="onChange">
+  <van-tabbar-item icon="shop">我的商品</van-tabbar-item>
+  <van-tabbar-item icon="balance-list">配送管理</van-tabbar-item>
+  <van-tabbar-item icon="manager">个人</van-tabbar-item>
+</van-tabbar>
+<van-popup 
+    show="{{ show1 }}"
+    round
+    closeable
+    close-icon="close"
+    position="bottom"
+    custom-style="height: 40%"
+    bind:close="onClose1">
+    <view class="popup">
+      您累计销售：
+      <text>¥ {{total_consumption}}</text>
+    </view>
+</van-popup>
+<van-popup 
+    show="{{ show2 }}"
+    round
+    closeable
+    close-icon="close"
+    position="bottom"
+    custom-style="height: 70%"
+    bind:close="onClose2">
+    <view class="tit"><text class="t2">鲜花销售排行榜</text></view>
+    <view class="ranking">
+      <van-row>
+        <van-col span="6">排名</van-col>
+        <van-col span="8">名称</van-col>
+        <van-col span="8">销量</van-col>
+      </van-row>
+      <view   wx:for="{{ranking}}" wx:key="index" >
+        <van-row>
+          <van-col span="6">{{index+1}}</van-col>
+          <van-col span="8">{{item.goods_name}}</van-col>
+          <van-col span="8">{{item.sales_num}}</van-col>
+        </van-row>
+      </view>
+    </view>
+</van-popup>
+<view class="user_info">
+  <view class="user_info_wrap" wx:if="{{userInfo.avatarUrl}}">
+    <image class="user_bgc" src="../../icons/bg.png" />
+    <view class="info">
+      <image class="info_icon" src="{{userInfo.avatarUrl}}" />
+      <view class="info_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <!--
+  <view class="login">
+    <van-button  round type="normal"  size="large" color="linear-gradient(to right, #00cccc, #6149f6)" bind:click="login">登录</van-button>
+  </view>
+  -->
+</view>
+<view class="user_content">
+  <view class="user_main">
+    <van-cell title="销售额统计" is-link bind:click="showPopup1" />
+    <van-cell title="鲜花排行榜" is-link bind:click="showPopup2" />
+
+    <view class="main_info_wrap">
+      <van-cell is-link title="意见反馈" link-type="navigateTo" url="/pages/feedback/feedback"/>
+      <van-cell is-link title="关于我们" link-type="navigateTo" />
+    </view>
+
+  </view>
+</view>

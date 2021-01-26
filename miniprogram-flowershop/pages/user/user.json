@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "tabBar_cust":"../../components/tabBar_cust/tabBar_cust"
+    },
+    "navigationBarTitleText": "个人中心"
+}

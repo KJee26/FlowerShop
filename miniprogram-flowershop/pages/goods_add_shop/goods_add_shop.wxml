@@ -1,0 +1,58 @@
+<!--pages/goods_add/goods_add.wxml-->
+<van-cell-group>
+  <van-field
+    model:value="{{ goodsName }}"
+    required
+    clearable
+    label="商品名称"
+    placeholder="请输入商品名称"
+    bind:change="getGoodsName"
+    left-icon="flower-o"
+  />
+  <van-field
+    model:value="{{ unit }}"
+    required
+    clearable
+    label="单位"
+    placeholder="请输入单位"
+    bind:change="getUnit"
+    left-icon="arrow"
+  />
+  <van-field
+  model:value="{{ price }}"
+    required
+    clearable
+    label="单价"
+    placeholder="请输入单价"
+    bind:change="getPrice"
+    left-icon="gold-coin-o"
+  />
+  <van-field
+  model:value="{{ reserveNum }}"
+    required
+    clearable
+    label="商品总量"
+    placeholder="请输入商品总量"
+    bind:change="getReserveNum"
+    left-icon="edit"
+  />
+  <van-field
+  model: value="{{ pic }}"
+    required
+    clearable
+    label="商品预览图链接"
+    placeholder="请输入商品预览图链接"
+    bind:change="getPic"
+    left-icon="photo-o"
+  />
+</van-cell-group>
+<view class="btn">
+<van-button icon="plus" round type="primary" size="large" color="linear-gradient(to right, #00cccc, #6149f6)" bindtap="addGoods" bindtap="confirmAdd">添加商品</van-button>
+</view>
+<!--
+  <view class="tit">商品名称：<input bindinput="getGoodsName" auto-focus placeholder="请输入商品名称" /></view>
+<view class="tit">单位：<input bindinput="getUnit" auto-focus placeholder="请输入单位"/></view>
+<view class="tit">商品单价：<input bindinput="getPrice" auto-focus placeholder="请输入单价"/></view>
+<view class="tit">商品余量：<input bindinput="getReserveNum" auto-focus placeholder="请输入总量"/></view>
+<view class="tit">商品预览图链接：<input bindinput="getPic" auto-focus placeholder="请输入预览图src"/></view>
+  <button type="primary" plain="true" bindtap="confirmAdd">确定添加</button>-->

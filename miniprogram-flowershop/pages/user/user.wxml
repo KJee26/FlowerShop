@@ -1,0 +1,45 @@
+<van-tabbar active="{{3 }}" bind:change="onChange">
+  <van-tabbar-item icon="shop">首页</van-tabbar-item>
+  <van-tabbar-item icon="cart">购物车</van-tabbar-item>
+  <van-tabbar-item icon="balance-list">订单</van-tabbar-item>
+  <van-tabbar-item icon="manager">我的</van-tabbar-item>
+</van-tabbar>
+<van-popup 
+    show="{{ show }}"
+    round
+    closeable
+    close-icon="close"
+    position="bottom"
+    custom-style="height: 40%"
+    bind:close="onClose">
+  <view class="popup">
+    您累计消费：
+    <text>¥ {{total_consumption}}</text>
+  </view>
+</van-popup>
+
+<view class="user_info">
+  <view class="user_info_wrap" wx:if="{{userInfo.avatarUrl}}">
+    <image class="user_bgc" src="../../icons/bg.png" />
+    <view class="info">
+      <image class="info_icon" src="{{userInfo.avatarUrl}}" />
+      <view class="info_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="login">
+    <van-button  round type="normal"  size="large" color="linear-gradient(to right, #00cccc, #6149f6)" bind:click="login">登录</van-button>
+  </view>
+</view>
+
+<view class="user_content">
+  <view class="user_main">
+    
+    <van-cell title="消费统计" is-link bind:click="showPopup" /> 
+    <van-cell is-link title="地址管理" link-type="navigateTo" bindtap="addressChoose"/>
+
+    <view class="main_info_wrap">
+      <van-cell is-link title="意见反馈" link-type="navigateTo" url="/pages/feedback/feedback"/>
+      <van-cell is-link title="关于我们" link-type="navigateTo" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,146 @@
+<van-tabbar active="{{1 }}" bind:change="onChange2">
+  <van-tabbar-item icon="shop">我的商品</van-tabbar-item>
+  <van-tabbar-item icon="balance-list">配送管理</van-tabbar-item>
+  <van-tabbar-item icon="manager">个人</van-tabbar-item>
+</van-tabbar>
+<van-tabs animated swipeable color="#9400D3" active="{{ active }}" bind:change="onChange">  
+  <van-tab title="待接单">
+    <view class="order_item" wx:for="{{orders}}" wx:key="index" wx:if="{{item.shopCode==0}}">
+      <block >
+        <view>
+          <view class="order_no">配送地址:</view>
+          <view class="order_no_value">{{item.address}}</view>
+        </view>
+      </block>
+
+      <view class="order_no_wrap">
+        <view class="order_no">订单编号:</view>
+        <view class="order_no_value">{{item.orderId}}</view>
+      </view>
+      
+      <view class="order_time_wrap">
+        <view class="order_time">下单时间:</view>
+        <view class="order_time_value">{{item.createTime}}</view>
+      </view>
+      
+      <view class="order_time">商品列表：
+        <view wx:for="{{item.goods}}" wx:key="index">
+          <view  class="goodslist">{{item.goods_name}}{{item.price}}X{{item.num}}</view>
+        </view>
+      </view>
+      <view class="order_price_wrap">
+        <view class="order_price">订单价格</view>
+        <view class="order_price_value">¥{{item.totalPrice}}</view>
+      </view>
+      <view class="btn">
+        <van-button  round type="primary" size="small" color="linear-gradient(to right, #00cccc, #6149f6)" bindtap="btnReceive" id="{{item.orderId}}">确认接单
+        </van-button>
+      </view>
+    </view>
+  </van-tab>
+  
+  <van-tab title="待发货">
+    <view class="order_item" wx:for="{{orders}}" wx:key="index" wx:if="{{item.shopCode==1}}">
+      <block >
+        <view>
+          <view class="order_no">配送地址:</view>
+          <view class="order_no_value">{{item.address}}</view>
+        </view>
+      </block>
+
+      <view class="order_no_wrap">
+        <view class="order_no">订单编号:</view>
+        <view class="order_no_value">{{item.orderId}}</view>
+      </view>
+      
+      <view class="order_time_wrap">
+        <view class="order_time">下单时间:</view>
+        <view class="order_time_value">{{item.createTime}}</view>
+      </view>
+      
+      <view class="order_time">商品列表：
+        <view wx:for="{{item.goods}}" wx:key="index">
+          <view  class="goodslist">{{item.goods_name}}{{item.price}}X{{item.num}}</view>
+        </view>
+      </view>
+      <view class="order_price_wrap">
+        <view class="order_price">订单价格</view>
+        <view class="order_price_value">¥{{item.totalPrice}}</view>
+      </view>
+      <view class="btn">
+        <van-button  round type="primary" size="small" color="linear-gradient(to right, #00cccc, #6149f6)" bindtap="btnDeliver" id="{{item.orderId}}">确认发货
+        </van-button>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="待送达">
+    <view class="order_item" wx:for="{{orders}}" wx:key="index" wx:if="{{item.shopCode==2}}">
+      <block >
+        <view>
+          <view class="order_no">配送地址:</view>
+          <view class="order_no_value">{{item.address}}</view>
+        </view>
+      </block>
+
+      <view class="order_no_wrap">
+        <view class="order_no">订单编号:</view>
+        <view class="order_no_value">{{item.orderId}}</view>
+      </view>
+      
+      <view class="order_time_wrap">
+        <view class="order_time">下单时间:</view>
+        <view class="order_time_value">{{item.createTime}}</view>
+      </view>
+      
+      <view class="order_time">商品列表：
+        <view wx:for="{{item.goods}}" wx:key="index">
+          <view  class="goodslist">{{item.goods_name}}{{item.price}}X{{item.num}}</view>
+        </view>
+      </view>
+      <view class="order_price_wrap">
+        <view class="order_price">订单价格</view>
+        <view class="order_price_value">¥{{item.totalPrice}}</view>
+      </view>
+      <view class="btn">
+        <van-button  round type="primary" size="small" color="linear-gradient(to right, #00cccc, #6149f6)" bindtap="btnComplete" id="{{item.orderId}}">配送完成
+        </van-button>
+      </view>
+      
+    </view>
+  </van-tab>
+  <van-tab title="全部">
+    <view class="order_item" wx:for="{{orders}}" wx:key="index">
+      <block >
+        <view>
+          <view class="order_no">配送地址:</view>
+          <view class="order_no_value">{{item.address}}</view>
+        </view>
+      </block>
+
+      <view class="order_no_wrap">
+        <view class="order_no">订单编号:</view>
+        <view class="order_no_value">{{item.orderId}}</view>
+      </view>
+      
+      <view class="order_time_wrap">
+        <view class="order_time">下单时间:</view>
+        <view class="order_time_value">{{item.createTime}}</view>
+      </view>
+      
+      <view class="order_time">商品列表：
+        <view wx:for="{{item.goods}}" wx:key="index">
+          <view  class="goodslist">{{item.goods_name}}{{item.price}}X{{item.num}}</view>
+        </view>
+      </view>
+      <view class="order_price_wrap">
+        <view class="order_price">订单价格</view>
+        <view class="order_price_value">¥{{item.totalPrice}}</view>
+      </view>
+    </view>
+  </van-tab>
+
+</van-tabs>
+
+<view class="bottom">
+  <van-divider />
+</view>

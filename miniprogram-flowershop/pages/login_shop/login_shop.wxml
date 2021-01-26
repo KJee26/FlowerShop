@@ -1,0 +1,26 @@
+<view class="inbox">
+  <van-notify id="van-notify" />
+<van-cell-group>
+  <van-field
+    model:value="{{ phoneNumber }}"
+    required
+    label="账号"
+    placeholder="请输入账号"
+    bind:change="getPhoneNumber"
+    left-icon="phone"
+    maxlength="11"
+  />
+  <van-field
+    model:value="{{ password }}"
+    type="password"
+    required
+    label="密码"
+    placeholder="请输入密码"
+    bind:change="getPassword"
+    left-icon="eye"
+    maxlength="20"
+  />
+</van-cell-group>
+<!--登录按钮-->
+  <van-button  round  open-type="getUserInfo" type="normal"  size="large" color="linear-gradient(to right, #00cccc, #6149f6)" bindgetuserinfo="getInfoAndLogin">登录</van-button>
+</view>

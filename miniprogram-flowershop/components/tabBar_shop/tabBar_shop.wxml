@@ -1,0 +1,5 @@
+<van-tabbar active="{{active }}" bind:change="onChange">
+  <van-tabbar-item icon="shop">我的商品</van-tabbar-item>
+  <van-tabbar-item icon="balance-list">配送管理</van-tabbar-item>
+  <van-tabbar-item icon="manager">个人</van-tabbar-item>
+</van-tabbar>

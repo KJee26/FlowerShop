@@ -1,0 +1,95 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goods_list/goods_list",
+    "pages/goods_detail/goods_detail",
+    "pages/cart/cart",
+    "pages/order/order",
+    "pages/user/user", 
+    "pages/feedback/feedback",
+    "pages/login/login",
+    "pages/login_shop/login_shop",
+    "pages/auth/auth",
+    "pages/pay/pay",
+    "pages/goods_list_shop/goods_list_shop",
+    "pages/goods_add_shop/goods_add_shop",
+    "pages/goods_detail_shop/goods_detail_shop",
+    "pages/order_shop/order_shop",
+    "pages/user_shop/user_shop",
+    "pages/comment/comment"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "花卉市集",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "color": "#999",
+    "selectedColor": "#067edf",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/goods_list/goods_list",
+        "text": "首页",
+        "iconPath": "icons/index.png",
+        "selectedIconPath": "icons/index-s.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icons/cart.png",
+        "selectedIconPath": "icons/cart-s.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "icons/order.png",
+        "selectedIconPath": "icons/order-s.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user-s.png"
+      },
+      {
+        "pagePath": "pages/goods_list_shop/goods_list_shop",
+        "text": "商品列表-店家",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user-s.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "./dist/button/index",
+    "van-icon": "./dist/icon/index",
+    "van-tabbar": "./dist/tabbar/index",
+    "van-tabbar-item": "./dist/tabbar-item/index",
+    "van-field": "./dist/field/index",
+    "van-image": "./dist/image/index",
+    "van-goods-action": "./dist/goods-action/index",
+    "van-goods-action-icon": "./dist/goods-action-icon/index",
+    "van-goods-action-button": "./dist/goods-action-button/index",
+    "van-notify": "./dist/notify/index",
+    "van-toast": "./dist/toast/index",
+    "van-tab": "./dist/tab/index",
+    "van-tabs": "./dist/tabs/index",
+    "van-share-sheet": "./dist/share-sheet/index",
+    "van-steps": "./dist/steps/index",
+    "van-divider": "./dist/divider/index",
+    "van-dialog": "./dist/dialog/index",
+    "van-popup": "./dist/popup/index",
+    "van-cell": "./dist/cell/index",
+    "van-cell-group": "./dist/cell-group/index",
+    "van-rate": "./dist/rate/index",
+    "van-skeleton": "./dist/skeleton/index",
+    "van-row": "./dist/row/index",
+    "van-col": "./dist/col/index"
+  }
+}
